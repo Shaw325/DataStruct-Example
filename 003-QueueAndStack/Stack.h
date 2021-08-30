@@ -7,14 +7,14 @@
 template <typename T>
 struct SNode {
     T data;
-    SNode<T> *prev,*next;
+    SNode<T> *next;
 };
 
 template <typename T>
 class Stack {
 private:
     int lenght;
-    SNode<T> *last;
+    SNode<T> *head;
 
 public:
     Stack();
@@ -30,17 +30,14 @@ template <typename T> Stack<T>::Stack() {
     SNode<T> *node = (SNode<T>*)malloc(sizeof(SNode<T>));
     node->data = -1;
     node->next = nullptr;
-    node->prev = nullptr;
-    last = node;
+    head = node;
 }
 
 template <typename T> void Stack<T>::push(T data) {
     SNode<T> *node = (SNode<T>*)malloc(sizeof(SNode<T>));
     node->data = data;
-    node->next = nullptr;
-    node->prev = last;
-    last->next = node;
-    last = node;
+    node->next = head;
+    head = node;
     lenght++;
 }
 
@@ -48,14 +45,16 @@ template <typename T> T Stack<T>::pop() {
     if(isEmpty()){
         return NULL;
     }
-    SNode<T> *node = last;
-    last->prev->next = nullptr;
-    last = last->prev;
-    return node->data;
+    T data = head->data;
+    SNode<T> *node = head;
+    head = head->next;
+    free(node);
+    lenght--;
+    return data;
 }
 
 template <typename T> bool Stack<T>::isEmpty() {
-    return last->data == -1;
+    return head->data == -1;
 }
 
 #define DATASTRUCTURE_STACK_H
