@@ -49,24 +49,27 @@ int main() {
 //    cout << (last->data) << endl;
 
     //----------------------------String Test ---------------------------------
-//    char *h=(char*)"Hello";
-//    cout << strlen(h) << endl;
-//    String str = String((char *) "abc");
-//    String str1 = String((char *) "a");
-//    int compara = String::compare(&str, &str1);
-//    cout << str.len() << endl;
-//    cout << str1.len() << endl;
-//    cout << compara << endl;
-//    cout << (str + str1).len() << endl;
-//    String *mainStr = new String((char*)"Do you know that Google is the best company in the world.");
-//    String *matchStr = new String((char*)"Google");
-//    // using kmp method to recursive the index of the substring
-//    int index = mainStr->kmp(matchStr);
-//    cout << "Main String : ["
-//    << *(mainStr) << "]\r\n"
-//            << "Match String: ["
-//            << *(matchStr) << "]\r\n"
-//            << "Match position :" << index << endl;
+    char *h=(char*)"Hello";
+    cout << strlen(h) << endl;
+    String str = String((char *) "abc");
+    String str1 = String((char *) "a");
+    String str2 = String((char *) "abc");
+    int compara = String::compare(&str, &str1);
+    cout << boolalpha;
+    cout << (str == str2) << endl;
+    cout << str.len() << endl;
+    cout << str1.len() << endl;
+    cout << compara << endl;
+    cout << (str + str1).len() << endl;
+    String *mainStr = new String((char*)"Do you know that Google is the best company in the world.");
+    String *matchStr = new String((char*)"Google");
+    // using kmp method to recursive the index of the substring
+    int index = mainStr->kmp(matchStr);
+    cout << "Main String : ["
+    << *(mainStr) << "]\r\n"
+            << "Match String: ["
+            << *(matchStr) << "]\r\n"
+            << "Match position :" << index << endl;
 
 
     //----------------------------Tree Test ---------------------------------
@@ -117,7 +120,7 @@ int main() {
 //    cout << stack->pop() << endl;
 //    cout << stack->pop() << endl;
 //    cout << stack->pop() << endl;
-//
+
 //    return 0;
 }
 

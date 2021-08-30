@@ -3,9 +3,7 @@
 //
 
 #ifndef DATASTRUCTURE_TREE_H
-#define DATASTRUCTURE_TREE_H
 
-#endif //DATASTRUCTURE_TREE_H
 
 #include <iostream>
 #include "../003-QueueAndStack/Queue.h"
@@ -93,6 +91,10 @@ void print(TreeNode *root){
         preOrder(root);
     }
 }
+
+#define DATASTRUCTURE_TREE_H
+
+#endif //DATASTRUCTURE_TREE_H
 
 
 

@@ -28,6 +28,26 @@ public:
     static int strlen(String *str);
 };
 
+bool String::operator>(const String &c) {
+    String *str = (String *) &c;
+    int compare = String::compare(this,str);
+    return compare > 0;
+}
+
+
+bool String::operator<(const String &c) {
+    String *str = (String *) &c;
+    int compare = String::compare(this,str);
+    return compare < 0;
+}
+
+bool String::operator==(const String &c) {
+    String *str = (String *) &c;
+    int compare = String::compare(this,str);
+    return compare == 0;
+}
+
+
 ostream& operator<<(ostream& out,String &c){
     out << c.value;
     return out;
@@ -160,3 +180,4 @@ int String::strlen(String *str) {
     }
     return i;
 }
+

@@ -4,18 +4,28 @@
 
 #ifndef DATASTRUCTURE_QUEUE_H
 
+/**
+ * 队列
+ * 链式结构实现
+ * 单向链表实现
+ * 入队移动rear指针
+ * 出队移动front指针
+ * 出队需判空
+ *
+ * @tparam T
+ */
 template <typename T>
 struct QNode{
     T data;
-    QNode<T> *prev,*next;
+    QNode<T> *next;
 };
 
 template <typename T>
 class Queue {
 private:
     int lenght;
-    QNode<T> *head;
-    QNode<T> *last;
+    QNode<T> *front;
+    QNode<T> *rear;
 public:
     Queue();
     ~Queue();
@@ -29,45 +39,38 @@ template <typename T> Queue<T>::~Queue() {
 }
 
 template <typename T> Queue<T>::Queue() {
-    QNode<T> *dummy = (QNode<T>*)malloc(sizeof(QNode<T>));
-    dummy->next = nullptr;
-    head = dummy;
-    last = dummy;
-    head->next = last;
-    last->prev = head;
+    QNode<T> *node = (QNode<T>*)malloc(sizeof(QNode<T>));
+    node->next = nullptr;
+    node->data = 0;
+    front = node;
+    rear = node;
+    front->next = rear;
     lenght = 0;
 }
 
 template <typename T> void Queue<T>::push(T data) {
-    if(data == NULL){
+    if(!data){
         return;
     }
     QNode<T> *node = (QNode<T>*)malloc(sizeof(QNode<T>));
     node->data = data;
     node->next = nullptr;
-    if(lenght == 0){
-        node->prev = head;
-        head->next = node;
-    }else{
-        node->prev = last;
-        last->next = node;
-    }
-    last = node;
+    rear->next = node;
+    rear = node;
     lenght++;
 }
 
 template <typename T>
 T Queue<T>::pop() {
     if(isEmpty()){
-        return NULL;
+        return 0;
     }
     lenght--;
-    QNode<T> *node = head->next;
-    if(node->next){
-        node->next->prev = head;
-    }
-    head->next = node->next;
-    return node->data;
+    T data = front->next->data;
+    QNode<T> *node = front;
+    front = front->next;
+    free(node);
+    return data;
 }
 
 template <typename T>

@@ -43,7 +43,7 @@ template <typename T> void Stack<T>::push(T data) {
 
 template <typename T> T Stack<T>::pop() {
     if(isEmpty()){
-        return NULL;
+        return 0;
     }
     T data = head->data;
     SNode<T> *node = head;
