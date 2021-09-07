@@ -38,3 +38,4 @@ cmake-build-debug/*
 
 */*.obj
 /cmake-build-debug/
+/cmake-*/

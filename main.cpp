@@ -5,7 +5,7 @@
 #include "005-Tree/Tree.h"
 #include "003-QueueAndStack/Queue.h"
 #include "003-QueueAndStack/Stack.h"
-
+#include "003-QueueAndStack/LoopQueue.h"
 using namespace std;
 
 
@@ -49,27 +49,27 @@ int main() {
 //    cout << (last->data) << endl;
 
     //----------------------------String Test ---------------------------------
-    char *h=(char*)"Hello";
-    cout << strlen(h) << endl;
-    String str = String((char *) "abc");
-    String str1 = String((char *) "a");
-    String str2 = String((char *) "abc");
-    int compara = String::compare(&str, &str1);
-    cout << boolalpha;
-    cout << (str == str2) << endl;
-    cout << str.len() << endl;
-    cout << str1.len() << endl;
-    cout << compara << endl;
-    cout << (str + str1).len() << endl;
-    String *mainStr = new String((char*)"Do you know that Google is the best company in the world.");
-    String *matchStr = new String((char*)"Google");
-    // using kmp method to recursive the index of the substring
-    int index = mainStr->kmp(matchStr);
-    cout << "Main String : ["
-    << *(mainStr) << "]\r\n"
-            << "Match String: ["
-            << *(matchStr) << "]\r\n"
-            << "Match position :" << index << endl;
+//    char *h=(char*)"Hello";
+//    cout << strlen(h) << endl;
+//    String str = String((char *) "abc");
+//    String str1 = String((char *) "a");
+//    String str2 = String((char *) "abc");
+//    int compara = String::compare(&str, &str1);
+//    cout << boolalpha;
+//    cout << (str == str2) << endl;
+//    cout << str.len() << endl;
+//    cout << str1.len() << endl;
+//    cout << compara << endl;
+//    cout << (str + str1).len() << endl;
+//    String *mainStr = new String((char*)"Do you know that Google is the best company in the world.");
+//    String *matchStr = new String((char*)"Google");
+//    // using kmp method to recursive the index of the substring
+//    int index = mainStr->kmp(matchStr);
+//    cout << "Main String : ["
+//    << *(mainStr) << "]\r\n"
+//            << "Match String: ["
+//            << *(matchStr) << "]\r\n"
+//            << "Match position :" << index << endl;
 
 
     //----------------------------Tree Test ---------------------------------
@@ -120,10 +120,20 @@ int main() {
 //    cout << stack->pop() << endl;
 //    cout << stack->pop() << endl;
 //    cout << stack->pop() << endl;
+    LoopQueue<int,2> loopQueue;
+    loopQueue.enqueue(1);
+    loopQueue.enqueue(2);
+//    cout << "data:" << loopQueue.dequeue() << endl;
+    cout << "len:" << loopQueue.len() << endl;
+    loopQueue.enqueue(3);
+//    cout << "data:" << loopQueue.dequeue() << endl;
+//    cout << "data:" << loopQueue.dequeue() << endl;
+    cout << "len:" << loopQueue.len() << endl;
+    loopQueue.enqueue(4);
+//    cout << "data:" << loopQueue.dequeue() << endl;
+    cout << "len:" << loopQueue.len() << endl;
 
-//    return 0;
+    float a = 0x7f800000;
+    cout << (int)a << endl;
+    return 0;
 }
-
-
-
-
