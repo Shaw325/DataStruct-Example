@@ -6,6 +6,10 @@
 #include "003-QueueAndStack/Queue.h"
 #include "003-QueueAndStack/Stack.h"
 #include "003-QueueAndStack/LoopQueue.h"
+// #include "007-Sort/SelectionSort.cpp"
+// #include "007-Sort/InsertionSort.cpp"
+//#include "007-Sort/QuickSort.cpp"
+#include "007-Sort/BubbleSort.cpp"
 using namespace std;
 
 
@@ -120,20 +124,27 @@ int main() {
 //    cout << stack->pop() << endl;
 //    cout << stack->pop() << endl;
 //    cout << stack->pop() << endl;
-    LoopQueue<int,2> loopQueue;
-    loopQueue.enqueue(1);
-    loopQueue.enqueue(2);
-//    cout << "data:" << loopQueue.dequeue() << endl;
-    cout << "len:" << loopQueue.len() << endl;
-    loopQueue.enqueue(3);
-//    cout << "data:" << loopQueue.dequeue() << endl;
-//    cout << "data:" << loopQueue.dequeue() << endl;
-    cout << "len:" << loopQueue.len() << endl;
-    loopQueue.enqueue(4);
-//    cout << "data:" << loopQueue.dequeue() << endl;
-    cout << "len:" << loopQueue.len() << endl;
+    // LoopQueue<int,2> loopQueue;
+    // loopQueue.enqueue(1);
+    // loopQueue.enqueue(2);
+    // cout << "data:" << loopQueue.dequeue() << endl;
+    // cout << "len:" << loopQueue.len() << endl;
+    // loopQueue.enqueue(3);
+    // cout << "data:" << loopQueue.dequeue() << endl;
+    // cout << "data:" << loopQueue.dequeue() << endl;
+    // cout << "len:" << loopQueue.len() << endl;
+    // loopQueue.enqueue(4);
+    // cout << "data:" << loopQueue.dequeue() << endl;
+    // cout << "len:" << loopQueue.len() << endl;
 
-    float a = 0x7f800000;
-    cout << (int)a << endl;
+    int arr[6] = {1,9,4,2,8,7};
+    // selection_sort(arr,6);
+    // insertion_sort(arr,6);
+    // quick_sort(arr,6);
+    bubble(arr,6);
+    for(int i=0;i<6;i++){
+        cout << arr[i];
+    }
+    cout << endl;
     return 0;
 }
