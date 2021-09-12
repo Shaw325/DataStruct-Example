@@ -25,6 +25,29 @@ O(N)& =\sum_{x=1}^{n}x \\
 \end{aligned}
 $$
 ​		根据时间复杂度定义，忽略低位，用最高项次幂作为代表的时间复杂度，可以得知：**选择排序**的时间复杂度为$O(n^2)$，并且由于每次选择第$p$小的项时，都需要尽可能遍历完毕，所以这是个稳定的排序算法，最好最差都是$O(n^2)$
+### 2. 代码实现
+```c++
+int select_sort(int arr[],int len){
+
+    for(int i = 0; i < len; i++){
+        // the index of first item.
+        int min = i;
+        // find the min
+        for(int j = i+1; j < len; j++){
+            if(arr[min] > arr[j]){
+                min = j;
+            }
+        }
+        swap(arr,min,j);
+    }
+}
+
+void swap(int arr[],int a int b){
+    int temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+```
 
 ## Insertion-Sort
 
@@ -38,8 +61,8 @@ $$
 
 ## Shell-Sort(增强的插入排序)
 
-## Heap-Sort(增加的选择排序)
+## Heap-Sort(树化的选择排序)
 
-## Bit-Sort(空间换时间)
+## Bin-Sort(空间换时间)
 
 ## BaseNumber-Sort(优化桶排序)

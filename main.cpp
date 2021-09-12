@@ -6,10 +6,14 @@
 #include "003-QueueAndStack/Queue.h"
 #include "003-QueueAndStack/Stack.h"
 #include "003-QueueAndStack/LoopQueue.h"
-// #include "007-Sort/SelectionSort.cpp"
-// #include "007-Sort/InsertionSort.cpp"
-//#include "007-Sort/QuickSort.cpp"
+#include "007-Sort/SelectionSort.cpp"
+#include "007-Sort/InsertionSort.cpp"
+#include "007-Sort/QuickSort.cpp"
 #include "007-Sort/BubbleSort.cpp"
+#include "007-Sort/MergeSort.cpp"
+#include "007-Sort/HeapSort.cpp"
+#include "008-Alogrithms/Merge.cpp"
+#include "008-Alogrithms/Math.h"
 using namespace std;
 
 
@@ -137,14 +141,21 @@ int main() {
     // cout << "data:" << loopQueue.dequeue() << endl;
     // cout << "len:" << loopQueue.len() << endl;
 
-    int arr[6] = {1,9,4,2,8,7};
-    // selection_sort(arr,6);
-    // insertion_sort(arr,6);
-    // quick_sort(arr,6);
-    bubble(arr,6);
-    for(int i=0;i<6;i++){
-        cout << arr[i];
-    }
-    cout << endl;
+    //----------------------------Sort Test ---------------------------------
+    // int a[6] = {1,9,4,2,8,7};
+    // heap(a,6);
+    // int b[4] = {2,5,6,0};
+    // heap(b,4);
+    // // selection_sort(arr,6);
+    // // insertion_sort(arr,6); 
+    // int *arr = merge(a,6,b,4);
+    // for(int i=0;i<6+4;i++){
+    //     cout << arr[i];
+    // }
+    // cout << endl;
+
+
+    //----------------------------Math Test ---------------------------------
+    cout << abs(-2) << endl;
     return 0;
 }

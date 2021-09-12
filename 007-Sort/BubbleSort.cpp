@@ -1,21 +1,20 @@
 //
 // Created by lindsey on 2021/9/9.
 //
-
-
-inline void swap(int arr[],int a,int b){
-    int temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
-}
+#include "swap.h"
 
 
 void bubble(int arr[],int len){
+    bool flag = true;
     for (int i = 0; i < len; ++i){
-        for (int j = i; j < len; ++j){
-            if(arr[i] > arr[i+1]){
-                swap(arr,i,i+1);
+        for (int j = 0; j < len-1; ++j){
+            if(arr[j] > arr[j+1]){
+                sort_swap(arr,j,j+1);
+                flag = false;
             }
+        }
+        if(flag){
+            break;
         }
     }
 }

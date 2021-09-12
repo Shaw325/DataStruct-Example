@@ -1,9 +1,5 @@
 
-void swap(int arr[],int a,int b){
-    int temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
-}
+#include "swap.h"
 
 
 void quick(int arr[],int left,int right){
@@ -22,7 +18,7 @@ void quick(int arr[],int left,int right){
             i++;
         }
         // 交换两个值
-        swap(arr,i,j);
+        sort_swap(arr,i,j);
     }
     // 把左边的再次执行
     quick(arr,left,i);

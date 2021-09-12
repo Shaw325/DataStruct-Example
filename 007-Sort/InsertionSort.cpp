@@ -1,10 +1,4 @@
-
-
-inline void swap(int arr[],int a,int b){
-    int temp = arr[a];
-    arr[a] = arr[b];
-    arr[b] = temp;
-}
+#include "swap.h"
 
 void insertion_sort(int arr[],int len){
     if(len < 1){
@@ -14,7 +8,7 @@ void insertion_sort(int arr[],int len){
         int temp = arr[i];
         int j = i-1;
         while(j >= 0 && arr[j] > temp){
-            swap(arr,j,j+1);
+            sort_swap(arr,j,j+1);
             j--;
         }
         arr[j+1] = temp;
