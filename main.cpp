@@ -1,19 +1,20 @@
 #include <iostream>
 
-#include "002-LinkList/DLinklist.h"
-#include "004-String/String.h"
-#include "005-Tree/Tree.h"
-#include "003-QueueAndStack/Queue.h"
-#include "003-QueueAndStack/Stack.h"
-#include "003-QueueAndStack/LoopQueue.h"
-#include "007-Sort/SelectionSort.cpp"
-#include "007-Sort/InsertionSort.cpp"
-#include "007-Sort/QuickSort.cpp"
-#include "007-Sort/BubbleSort.cpp"
-#include "007-Sort/MergeSort.cpp"
-#include "007-Sort/HeapSort.cpp"
-#include "008-Alogrithms/Merge.cpp"
-#include "008-Alogrithms/Math.h"
+// #include "002-LinkList/DLinklist.h"
+// #include "004-String/String.h"
+// #include "005-Tree/Tree.h"
+// #include "003-QueueAndStack/Queue.h"
+// #include "003-QueueAndStack/Stack.h"
+// #include "003-QueueAndStack/LoopQueue.h"
+// #include "007-Sort/SelectionSort.cpp"
+// #include "007-Sort/InsertionSort.cpp"
+// #include "007-Sort/QuickSort.cpp"
+// #include "007-Sort/BubbleSort.cpp"
+// #include "007-Sort/MergeSort.cpp"
+// #include "007-Sort/HeapSort.cpp"
+// #include "008-Alogrithms/Merge.cpp"
+// #include "008-Alogrithms/Math.h"
+#include "005-Tree/BalanceTree.h"
 using namespace std;
 
 
@@ -156,6 +157,12 @@ int main() {
 
 
     //----------------------------Math Test ---------------------------------
-    cout << abs(-2) << endl;
+    // cout << abs(-2) << endl;
+    int arr[4] = {6,3,4,7};
+    AVLTree *tree = new AVLTree();
+    for(int i=0;i<4;i++){
+        tree->insert(arr[i]);
+    }
+    tree->printLevel();
     return 0;
 }

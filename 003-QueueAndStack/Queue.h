@@ -30,17 +30,17 @@ public:
     ~Queue();
     void push(T data);
     T pop();
+    T get();
     bool isEmpty();
 };
 
 template <typename T> Queue<T>::~Queue() {
-    cout << "我被释放了" <<endl;
+    std::cout << "我被释放了" <<std::endl;
 }
 
 template <typename T> Queue<T>::Queue() {
     QNode<T> *node = (QNode<T>*)malloc(sizeof(QNode<T>));
     node->next = nullptr;
-    node->data = 0;
     front = node;
     rear = node;
     front->next = rear;
@@ -69,6 +69,15 @@ T Queue<T>::pop() {
     QNode<T> *node = front;
     front = front->next;
     free(node);
+    return data;
+}
+
+template <typename T>
+T Queue<T>::get() {
+    if(isEmpty()){
+        return 0;
+    }
+    T data = front->next->data;
     return data;
 }
 
