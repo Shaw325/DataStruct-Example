@@ -41,3 +41,5 @@ cmake-build-debug/*
 /cmake-*/
 /.vscode/
 /.idea/
+/build/*
+/build/

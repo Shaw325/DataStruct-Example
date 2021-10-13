@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/lindsey/workspace/cplusplus/DataStruct-Example/build",
-  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 -g   -o CMakeFiles/DataStructure.dir/main.cpp.o -c /home/lindsey/workspace/cplusplus/DataStruct-Example/main.cpp",
-  "file": "/home/lindsey/workspace/cplusplus/DataStruct-Example/main.cpp"
+  "command": "/usr/bin/x86_64-redhat-linux-g++    -std=c++11 -g   -o CMakeFiles/DataStructure.dir/merge.cpp.o -c /home/lindsey/workspace/cplusplus/DataStruct-Example/merge.cpp",
+  "file": "/home/lindsey/workspace/cplusplus/DataStruct-Example/merge.cpp"
 }
 ]

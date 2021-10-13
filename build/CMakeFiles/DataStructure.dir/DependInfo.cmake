@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lindsey/workspace/cplusplus/DataStruct-Example/main.cpp" "/home/lindsey/workspace/cplusplus/DataStruct-Example/build/CMakeFiles/DataStructure.dir/main.cpp.o"
+  "/home/lindsey/workspace/cplusplus/DataStruct-Example/merge.cpp" "/home/lindsey/workspace/cplusplus/DataStruct-Example/build/CMakeFiles/DataStructure.dir/merge.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

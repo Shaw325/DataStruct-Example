@@ -175,6 +175,9 @@ DataStructure_BINARY_DIR:STATIC=/home/lindsey/workspace/cplusplus/DataStruct-Exa
 //Value Computed by CMake
 DataStructure_SOURCE_DIR:STATIC=/home/lindsey/workspace/cplusplus/DataStruct-Example
 
+//Dependencies for target
+YourLib_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

@@ -52,37 +52,37 @@ include CMakeFiles/DataStructure.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/DataStructure.dir/flags.make
 
-CMakeFiles/DataStructure.dir/main.cpp.o: CMakeFiles/DataStructure.dir/flags.make
-CMakeFiles/DataStructure.dir/main.cpp.o: ../main.cpp
+CMakeFiles/DataStructure.dir/merge.cpp.o: CMakeFiles/DataStructure.dir/flags.make
+CMakeFiles/DataStructure.dir/merge.cpp.o: ../merge.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/lindsey/workspace/cplusplus/DataStruct-Example/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DataStructure.dir/main.cpp.o"
-	/usr/bin/x86_64-redhat-linux-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DataStructure.dir/main.cpp.o -c /home/lindsey/workspace/cplusplus/DataStruct-Example/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/DataStructure.dir/merge.cpp.o"
+	/usr/bin/x86_64-redhat-linux-g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/DataStructure.dir/merge.cpp.o -c /home/lindsey/workspace/cplusplus/DataStruct-Example/merge.cpp
 
-CMakeFiles/DataStructure.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DataStructure.dir/main.cpp.i"
-	/usr/bin/x86_64-redhat-linux-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lindsey/workspace/cplusplus/DataStruct-Example/main.cpp > CMakeFiles/DataStructure.dir/main.cpp.i
+CMakeFiles/DataStructure.dir/merge.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/DataStructure.dir/merge.cpp.i"
+	/usr/bin/x86_64-redhat-linux-g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/lindsey/workspace/cplusplus/DataStruct-Example/merge.cpp > CMakeFiles/DataStructure.dir/merge.cpp.i
 
-CMakeFiles/DataStructure.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DataStructure.dir/main.cpp.s"
-	/usr/bin/x86_64-redhat-linux-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lindsey/workspace/cplusplus/DataStruct-Example/main.cpp -o CMakeFiles/DataStructure.dir/main.cpp.s
+CMakeFiles/DataStructure.dir/merge.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/DataStructure.dir/merge.cpp.s"
+	/usr/bin/x86_64-redhat-linux-g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/lindsey/workspace/cplusplus/DataStruct-Example/merge.cpp -o CMakeFiles/DataStructure.dir/merge.cpp.s
 
-CMakeFiles/DataStructure.dir/main.cpp.o.requires:
-.PHONY : CMakeFiles/DataStructure.dir/main.cpp.o.requires
+CMakeFiles/DataStructure.dir/merge.cpp.o.requires:
+.PHONY : CMakeFiles/DataStructure.dir/merge.cpp.o.requires
 
-CMakeFiles/DataStructure.dir/main.cpp.o.provides: CMakeFiles/DataStructure.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/DataStructure.dir/build.make CMakeFiles/DataStructure.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/DataStructure.dir/main.cpp.o.provides
+CMakeFiles/DataStructure.dir/merge.cpp.o.provides: CMakeFiles/DataStructure.dir/merge.cpp.o.requires
+	$(MAKE) -f CMakeFiles/DataStructure.dir/build.make CMakeFiles/DataStructure.dir/merge.cpp.o.provides.build
+.PHONY : CMakeFiles/DataStructure.dir/merge.cpp.o.provides
 
-CMakeFiles/DataStructure.dir/main.cpp.o.provides.build: CMakeFiles/DataStructure.dir/main.cpp.o
+CMakeFiles/DataStructure.dir/merge.cpp.o.provides.build: CMakeFiles/DataStructure.dir/merge.cpp.o
 
 # Object files for target DataStructure
 DataStructure_OBJECTS = \
-"CMakeFiles/DataStructure.dir/main.cpp.o"
+"CMakeFiles/DataStructure.dir/merge.cpp.o"
 
 # External object files for target DataStructure
 DataStructure_EXTERNAL_OBJECTS =
 
-DataStructure: CMakeFiles/DataStructure.dir/main.cpp.o
+DataStructure: CMakeFiles/DataStructure.dir/merge.cpp.o
 DataStructure: CMakeFiles/DataStructure.dir/build.make
 DataStructure: CMakeFiles/DataStructure.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable DataStructure"
@@ -92,7 +92,7 @@ DataStructure: CMakeFiles/DataStructure.dir/link.txt
 CMakeFiles/DataStructure.dir/build: DataStructure
 .PHONY : CMakeFiles/DataStructure.dir/build
 
-CMakeFiles/DataStructure.dir/requires: CMakeFiles/DataStructure.dir/main.cpp.o.requires
+CMakeFiles/DataStructure.dir/requires: CMakeFiles/DataStructure.dir/merge.cpp.o.requires
 .PHONY : CMakeFiles/DataStructure.dir/requires
 
 CMakeFiles/DataStructure.dir/clean:

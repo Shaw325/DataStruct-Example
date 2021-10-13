@@ -56,41 +56,6 @@ CMAKE_SOURCE_DIR = /home/lindsey/workspace/cplusplus/DataStruct-Example
 CMAKE_BINARY_DIR = /home/lindsey/workspace/cplusplus/DataStruct-Example/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/DataStructure.dir
-
-# All Build rule for target.
-CMakeFiles/DataStructure.dir/all:
-	$(MAKE) -f CMakeFiles/DataStructure.dir/build.make CMakeFiles/DataStructure.dir/depend
-	$(MAKE) -f CMakeFiles/DataStructure.dir/build.make CMakeFiles/DataStructure.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/lindsey/workspace/cplusplus/DataStruct-Example/build/CMakeFiles  1
-	@echo "Built target DataStructure"
-.PHONY : CMakeFiles/DataStructure.dir/all
-
-# Include target in all.
-all: CMakeFiles/DataStructure.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/DataStructure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lindsey/workspace/cplusplus/DataStruct-Example/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/DataStructure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lindsey/workspace/cplusplus/DataStruct-Example/build/CMakeFiles 0
-.PHONY : CMakeFiles/DataStructure.dir/rule
-
-# Convenience name for target.
-DataStructure: CMakeFiles/DataStructure.dir/rule
-.PHONY : DataStructure
-
-# clean rule for target.
-CMakeFiles/DataStructure.dir/clean:
-	$(MAKE) -f CMakeFiles/DataStructure.dir/build.make CMakeFiles/DataStructure.dir/clean
-.PHONY : CMakeFiles/DataStructure.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/DataStructure.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

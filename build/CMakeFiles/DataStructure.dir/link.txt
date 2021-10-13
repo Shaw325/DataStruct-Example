@@ -1,1 +1,1 @@
-/usr/bin/x86_64-redhat-linux-g++   -std=c++11 -g    CMakeFiles/DataStructure.dir/main.cpp.o  -o DataStructure -rdynamic 
+/usr/bin/x86_64-redhat-linux-g++   -std=c++11 -g    CMakeFiles/DataStructure.dir/merge.cpp.o  -o DataStructure -rdynamic 

@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/DataStructure.dir/main.cpp.o"
+  "CMakeFiles/DataStructure.dir/merge.cpp.o"
   "DataStructure.pdb"
   "DataStructure"
 )

@@ -143,26 +143,31 @@ int main() {
     // cout << "len:" << loopQueue.len() << endl;
 
     //----------------------------Sort Test ---------------------------------
-    // int a[6] = {1,9,4,2,8,7};
-    // heap(a,6);
+    
+    // heap(a,10000);
     // int b[4] = {2,5,6,0};
     // heap(b,4);
-    // // selection_sort(arr,6);
-    // // insertion_sort(arr,6); 
+    // selection_sort(arr,6);
+    // insertion_sort(arr,6); 
     // int *arr = merge(a,6,b,4);
-    // for(int i=0;i<6+4;i++){
-    //     cout << arr[i];
+    // for(int i=0;i<10000-1;i++){
+    //     if(a[i] == a[i+1]){
+    //         cout << a[i] << ":" << i << "-";
+    //         cout << a[i+1] << ":"<<i+1 << endl;
+    //         // cout << "x" << endl;
+    //     }
     // }
     // cout << endl;
 
 
     //----------------------------Math Test ---------------------------------
     // cout << abs(-2) << endl;
-    int arr[4] = {6,3,4,7};
+    int arr[7] = {7,1,2,5,6,8,9};
     AVLTree *tree = new AVLTree();
-    for(int i=0;i<4;i++){
+    for(int i=0;i<7;i++){
         tree->insert(arr[i]);
     }
-    tree->printLevel();
+    // tree->printLevel();
+    // cout << (1 << 4) << endl;
     return 0;
 }

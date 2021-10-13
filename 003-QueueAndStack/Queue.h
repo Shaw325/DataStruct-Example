@@ -31,6 +31,7 @@ public:
     void push(T data);
     T pop();
     T get();
+    T last();
     bool isEmpty();
 };
 
@@ -57,6 +58,15 @@ template <typename T> void Queue<T>::push(T data) {
     rear->next = node;
     rear = node;
     lenght++;
+}
+
+template <typename T>
+T Queue<T>::last() {
+    if(isEmpty()){
+        return 0;
+    }
+    T data = rear->data;
+    return data;
 }
 
 template <typename T>

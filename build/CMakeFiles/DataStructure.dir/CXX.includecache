@@ -6,17 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/lindsey/workspace/cplusplus/DataStruct-Example/003-QueueAndStack/Queue.h
-
-/home/lindsey/workspace/cplusplus/DataStruct-Example/005-Tree/BalanceTree.h
+/home/lindsey/workspace/cplusplus/DataStruct-Example/merge.cpp
 iostream
 -
-../003-QueueAndStack/Queue.h
-/home/lindsey/workspace/cplusplus/DataStruct-Example/003-QueueAndStack/Queue.h
-
-/home/lindsey/workspace/cplusplus/DataStruct-Example/main.cpp
-iostream
--
-005-Tree/BalanceTree.h
-/home/lindsey/workspace/cplusplus/DataStruct-Example/005-Tree/BalanceTree.h
 

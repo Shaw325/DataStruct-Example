@@ -19,7 +19,7 @@ int abs(int x){
  * 正常情况下只能为-1，0，1
  * 当-2>=bf>=2时，需要触发平衡操作
  *
-*/
+ */
 #define LB 1;
 #define RB -1;
 #define BL 0;
@@ -39,6 +39,7 @@ private:
     int node_height(TreeNode *node);
     int bf(TreeNode *node);
     void adjustHeight(TreeNode *node);
+    void post(TreeNode *node);
 public:
 TreeNode *root;
     AVLTree();
@@ -50,72 +51,30 @@ TreeNode *root;
     void rotate_LR(TreeNode *node);
     void rotate_RL(TreeNode *node);
     bool empty();
-    void printLevel();
+    void postorder();
 };
 
 
-void AVLTree::printLevel(){
-    if(empty()){
-        cout << "空" << endl;
-    }
-    Queue<int> *fill_q = new Queue<int>();
-    Queue<TreeNode*> *queue = new Queue<TreeNode*>();
-    queue->push(root);
-    while(!queue->isEmpty()){
-        TreeNode *node = queue->pop();
-        if(node->data != -1 && node->left == nullptr){
-            queue->push(createNode(-1));
-        }else{
-            queue->push(node->left);
-        }
-        if(node->data != -1 && node->right == nullptr){
-            queue->push(createNode(-1));
-        }else{
-            queue->push(node->right);
-        }
-        
-        int height = node->height;
-        // 最底层需要填充数量
-        if((node->parent!=nullptr&&node->parent->left == node) || node == this->root){
-            int fill = (height-1)*2-1;
-            for(int i =0;i<fill;i++){
-                fill_q->push(-1);
-            }
-        }
-        if((node->parent!=nullptr&&node->parent->right == node)){
-            int fill2 = height *2 -1;
-            for(int i =0;i<fill2;i++){
-                fill_q->push(-1);
-            }
-        }
-        if(node->data == -1){
-            fill_q->push(-1);
-        }
-        fill_q->push(node->data);
-         TreeNode *next = queue->get();
-        if(next!=nullptr && next->height != node->height){
-            fill_q->push(-2);
-        }
-        
-       
-        // if(next!=nullptr && next->height != node->height){
-        //     fill_q->push(-2);
-        // }
-    }
-    while(!fill_q->isEmpty()){
-        int mark = fill_q->pop();
-        if(mark == -1){
-            cout << " ";
-        }else if(mark == -2){
-            cout << "" << endl;
-        }else{
-            cout << mark;
-        }
-    }
-}
-
 AVLTree::AVLTree(){
     root = nullptr;
+}
+
+AVLTree::~AVLTree(){
+    
+}
+
+void AVLTree::postorder(){
+    this->post(this->root);
+    cout << endl;
+}
+
+void AVLTree::post(TreeNode *node){
+    if(node == nullptr){
+        return;
+    }
+    post(node->left);
+    post(node->right);
+    cout << node->data;
 }
 
 TreeNode* AVLTree::createNode(int data){
@@ -179,13 +138,16 @@ void AVLTree::insert(int data){
         int lh = node_height(move->left);
         int rh = node_height(move->right);
         move->height = max(lh,rh) + 1;
-        if(abs(bf(move)) == 2){
+        if(bf(move) == 2 || bf(move) == -2){
             // 从这个结点开始平衡
+            this->postorder();
             balance(move);
+            this->postorder();
             break;
         }
         move = move -> parent;
     }
+    this->size++;
 }
 
 
@@ -217,40 +179,6 @@ int AVLTree::node_height(TreeNode *node){
     return node->height;
 }
 
-// void AVLTree::adjustBf(TreeNode *x){
-//     // 已经到了顶端
-//     if(x->parent == nullptr){
-//         return;
-//     }
-//     TreeNode *p = x->parent;
-//     int bf = x->bf;
-//     /*
-//      * 平衡因子(bf)的绝对值当小于2时，分三种情况
-//      * 1. (bf)大于0的情况下,调整祖先结点的平衡因子，递归到根或者平衡因子大于2为止
-//      * 2. (bf)小于0的情况，调整祖先结点的平衡因子，递归到根或者平衡因子小于-2为止
-//      * 3. (bf)等于0的情况，树不需要调整平衡因子，即对于祖先结点来说，子树高
-//      * 度并无变化，直接跳出
-//      *
-//      */
-//     if(abs(bf) < 2){
-//         if(bf == 0){
-//             return;
-//         }
-//         if(bf > 0){
-//             p->bf++;
-//         }else if(bf < 0){
-//             p->bf--;
-//         }
-//         adjustBf(p);
-//     }else {
-//         if(bf == -2){//需要左旋，为负数说明右结点大于左结点
-            
-//         }else if(bf == 2){// 需要右旋，为正2代表左结点大于右结点
-//             right_rotate(x);
-//         }
-//     }
-   
-// }
 
 void AVLTree::rotate_LR(TreeNode *node){
     TreeNode *left = node->left;

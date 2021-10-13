@@ -2,11 +2,28 @@
 
 [TOC]
 
-
-
 ## Bubbles-Sort
-
-​		
+    冒泡排序的原理较为简单，每轮依次从头到尾一一对比，如果前面的项比后面的大，就交换两个值。
+$$
+\begin{aligned}
+O(N) & = n(n-1) \\
+& = n^2-n
+\end{aligned}
+$$
+### 2. 代码实现
+```c++
+void sort(int arr[],int len){
+    for(int i = 0; i < len; i++){
+        for(int j = 0; j < len-1; j++){
+            if(arr[j] > arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+    } 
+}
+```
 
 ## Selection-Sort
 
@@ -53,7 +70,7 @@ void swap(int arr[],int a int b){
 
 ### 1.时间复杂度分析
 
-​		待排序列$s_1,s_2,s_3...s_n$，插入排序每次会从序列头的后一个元素开始，即$s2$开始向前遍历，
+   待排序列$s_1,s_2,s_3...s_n$，插入排序每次会从序列前部设置一个基准值，然后向前找到这个基准值的位置。
 
 ## Quick-Sort
 
