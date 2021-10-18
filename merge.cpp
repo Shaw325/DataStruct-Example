@@ -56,13 +56,13 @@ int main(){
     Node<int> *node11 = create(3);
     Node<int> *node22 = create(5);
     Node<int> *node33 = create(7);
-    Node<int> *node44 = create(10);
-    Node<int> *node55 = create(11);
+//    Node<int> *node44 = create(10);
+//    Node<int> *node55 = create(11);
     head2->next = node11;
     node11->next = node22;
     node22->next = node33;
-    node33->next = node44;
-    node44->next = node55;
+//    node33->next = node44;
+//    node44->next = node55;
 
     Node<int> *lc = mergerTwo(head,head2);
     while(lc != nullptr){

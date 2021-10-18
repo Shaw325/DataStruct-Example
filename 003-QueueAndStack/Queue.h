@@ -3,7 +3,7 @@
 //
 
 #ifndef DATASTRUCTURE_QUEUE_H
-
+#include <iostream>
 /**
  * 队列
  * 链式结构实现
@@ -49,9 +49,9 @@ template <typename T> Queue<T>::Queue() {
 }
 
 template <typename T> void Queue<T>::push(T data) {
-    if(!data){
-        return;
-    }
+//    if(!data){
+//        return;
+//    }
     QNode<T> *node = (QNode<T>*)malloc(sizeof(QNode<T>));
     node->data = data;
     node->next = nullptr;
