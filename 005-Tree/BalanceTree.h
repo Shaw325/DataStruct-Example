@@ -140,9 +140,9 @@ void AVLTree::insert(int data){
         move->height = max(lh,rh) + 1;
         if(bf(move) == 2 || bf(move) == -2){
             // 从这个结点开始平衡
-            this->postorder();
+//            this->postorder();
             balance(move);
-            this->postorder();
+//            this->postorder();
             break;
         }
         move = move -> parent;

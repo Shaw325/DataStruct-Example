@@ -3,7 +3,8 @@
 //
 
 #ifndef DATASTRUCTURE_STACK_H
-
+#include <iostream>
+using namespace std;
 template <typename T>
 struct SNode {
     T data;
@@ -13,26 +14,37 @@ struct SNode {
 template <typename T>
 class Stack {
 private:
-    int lenght;
+
     SNode<T> *head;
 
 public:
+    int lenght;
     Stack();
     ~Stack();
     void push(T data);
     T pop();
     bool isEmpty();
+    T top();
 };
+
+template <typename T>
+T Stack<T>::top() {
+    return head->data;
+}
 
 
 template <typename T> Stack<T>::Stack() {
     lenght = 0;
     SNode<T> *node = (SNode<T>*)malloc(sizeof(SNode<T>));
-    node->data = -1;
     node->next = nullptr;
     head = node;
 }
 
+/**
+ * 头插法
+ * @tparam T
+ * @param data
+ */
 template <typename T> void Stack<T>::push(T data) {
     SNode<T> *node = (SNode<T>*)malloc(sizeof(SNode<T>));
     node->data = data;
@@ -54,7 +66,7 @@ template <typename T> T Stack<T>::pop() {
 }
 
 template <typename T> bool Stack<T>::isEmpty() {
-    return head->data == -1;
+    return lenght == 0;
 }
 
 #define DATASTRUCTURE_STACK_H

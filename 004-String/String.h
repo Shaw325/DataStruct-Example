@@ -89,7 +89,29 @@ int String::indexOf(String *str) {
 }
 
 /**
- * ggggggg
+ * i=6
+ * j=1
+ * ggoogooglegool kmp
+ * google
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ * [-1,0,1,1,2,0,1,0]
+ * [-1,0,0,1,0,0]
+ *
+ * i=1
+ * k=0
+ * arr[i] == arr[k]
+ * [-1,]
+ *
+ * abaabcac
+ *
+ *
+ * google
  * a
  * @param str
  * @return
@@ -130,6 +152,18 @@ int String::len() {
 
 
 /**
+ * i=1
+ * k=0
+ * google
+ *
+ * i
+ *
+ * abaaba ac
+ * 当前位置下，前缀和后缀最大匹配长度k
+
+ *
+ * [-1,0,1,1,2,0,1,0]
+ *
  * ogoogoo
  * @param str
  * @param next
@@ -137,10 +171,9 @@ int String::len() {
 void String::getNext(String *str,int next[]) {
     int len = String::strlen(str);
     next[0] = -1;
-    next[1] = 0;
     int k = 0;
-    for(int i = 2; i < len; i++){
-        if(str->charAt(i) == str->charAt(k)){
+    for(int i = 1; i < len; i++){
+        if(k == -1 || str->charAt(i) == str->charAt(k)){
             next[++i] = ++k;
         }else{
             k = next[i];
